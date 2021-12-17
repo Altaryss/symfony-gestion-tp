@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="#">
-    <img src="https://cdn.discordapp.com/attachments/782900445077045258/921528902621487144/logo.png" alt="Logo" width="200" height="200">
+    <img src="https://cdn.discordapp.com/attachments/782900445077045258/921528902621487144/logo.png" alt="Logo" width="200">
   </a>
 
   <h1 align="center"><b>Symfony TP</b></h1>
