@@ -51,7 +51,9 @@ Ceci est une liste des étapes à suivre pour l'installation et le bon fonctionn
    ```
 En cas d'erreur d'installation pensez à supprimer les dossiers vendor et à recommencer depuis l'étape 1
 4. Initialiser la base de donnée
+   ```
    https://symfony.com/doc/current/doctrine.html#configuring-the-database
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
