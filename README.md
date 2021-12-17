@@ -49,11 +49,8 @@ Ceci est une liste des étapes à suivre pour l'installation et le bon fonctionn
    ```sh
    composer install
    ```
-En cas d'erreur d'installation pensez à supprimer les dossiers vendor et à recommencer depuis l'étape 1<br>
 4. Initialiser la base de donnée
-   ```
    https://symfony.com/doc/current/doctrine.html#configuring-the-database
-   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -64,3 +61,5 @@ Ce site permet de gérer des évenement ou des personnes ajoutent de l'argent et
    ```sh
    symfony serve:start
    ```
+   
+   En cas d'erreur d'installation pensez à supprimer les dossiers vendor et à recommencer depuis l'étape 1<br>
