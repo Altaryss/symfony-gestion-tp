@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un Evenement{% endblock %}
+
+{% block body %}
+    <div class="d-flex align-items-center py-4">
+        <a class="d-flex btn btn-secondary mr-4" href="{{ path('event') }}">
+            <svg fill="#fff" width="24" height="24" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M 526 223C 526 223 526 223 526 223C 526 223 526 223 527 223C 527 223 727 423 727 423C 742 438 742 462 727 477C 712 492 688 492 673 477C 673 477 538 341 538 341C 538 341 538 750 538 750C 538 771 522 788 501 788C 480 789 463 771 463 750C 463 750 463 340 463 340C 463 340 327 477 327 477C 312 492 288 492 273 477C 258 462 258 438 273 423C 273 423 469 228 469 228C 476 218 488 212 500 212C 509 212 519 216 526 223C 526 223 526 223 526 223" transform="rotate(270,500,500)"/></svg>
+        </a>
+        <h1 class="ms-2 mb-0">Modifier un Evenement</h1>
+    </div>
+    <div class="container">
+        {{ form(form) }}
+        <a href="{{ path('userSum', {"fid": e.event.id, "uid": e.id}) }}">Modifier la somme</a>
+    </div>
+{% endblock %}
