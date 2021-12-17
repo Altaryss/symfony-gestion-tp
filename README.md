@@ -12,11 +12,11 @@
     <a href="https://github.com/sbdjs/website"><strong>Découvrir »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/symfony-gestion-tp">Accueil</a>
+    <a href="https://github.com/Altaryss/symfony-gestion-tp">Accueil</a>
     ·
-    <a href="https://github.com/symfony-gestion-tp/issues">Signaler un Bug</a>
+    <a href="https://github.com/Altaryss/symfony-gestion-tp/issues">Signaler un Bug</a>
     ·
-    <a href="https://github.com/symfony-gestion-tp/issues">Suggestion</a>
+    <a href="https://github.com/Altaryss/symfony-gestion-tp/issues">Suggestion</a>
   </p>
 </p>
 
