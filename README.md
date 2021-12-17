@@ -58,7 +58,7 @@ En cas d'erreur d'installation pensez à supprimer les dossiers vendor et à rec
 
 Ce site permet de gérer des évenement ou des personnes ajoutent de l'argent et détermine qui doit quels sommes à qui.
 
-1. Lancer le serveur (front-end)
+1. Lancer le serveur
    ```sh
    symfony serve:start
    ```
