@@ -54,6 +54,71 @@ class EventController extends AbstractController
             ['event' => $fid]
         );
 
+        $queryAvgMember = $doctrine->getRepository(Mtmue::class)->createQueryBuilder('m')
+            ->select("count(m.user)")
+            ->where('m.event = :fid')
+            ->setParameter('fid', $fid)
+            ->getQuery()
+            ->getArrayResult();
+
+        $queryMember = $doctrine->getRepository(Mtmue::class)->createQueryBuilder('m')
+            ->select("m")
+            ->where('m.event = :fid')
+            ->setParameter('fid', $fid)
+            ->getQuery()
+            ->getArrayResult();
+
+
+
+        $queryAvgScore = $doctrine->getRepository(Mtmue::class)->createQueryBuilder('m')
+            ->select("sum(m.sum)")
+            ->where('m.event = :fid')
+            ->setParameter('fid', $fid)
+            ->getQuery()
+            ->getArrayResult();
+
+        /*
+         * Code fonctionnel à 50%
+         * Le while va trop loin par rapport à l'array $compteur ou $compteur2
+         * et je ne trouve pas comment le fix
+
+        $compteur = 0;
+        $compteur2 = 0;
+        $personne_qui_Doit = array();
+        $personnd_qui_recoivent = array();
+
+        if ($queryAvgMember[0][1] > 0) {
+            $argent_a_rendre = Round($queryAvgScore[0][1] / $queryAvgMember[0][1]);
+            print_r($argent_a_rendre);
+            print_r('<br>');
+
+            foreach ($queryMember as $member)
+            {
+                Round($member['sum'] = $member['sum'] - $argent_a_rendre, 2);
+                if ($member['sum'] > 0)
+                {
+                    array_push($personnd_qui_recoivent, $member);
+                }
+                if ($member['sum'] < 0)
+                {
+                    array_push($personne_qui_Doit, $member);
+                }
+            }
+
+            while ($queryAvgMember[0][1] > $compteur + $compteur2)
+            {
+                if ($personnd_qui_recoivent[$compteur]['sum'] <= -$personne_qui_Doit[$compteur2]['sum'])
+                {
+                    $compteur++;
+                }
+                else
+                {
+                    $compteur2++;
+                }
+            }
+        }
+        */
+
         return $this->render("event/view.html.twig", [
             'event' => $events,
             'id' => $fid,
